@@ -1,0 +1,12 @@
+# Lazarus ignore files
+
+*.exe
+*.bak
+*.o
+*.ppu
+*.compiled
+*.obj
+*.lps
+
+lib/
+
