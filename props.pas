@@ -27,7 +27,7 @@ type
     property Value: T read GetValue write SetValue;
   end;
 
-  TProperties = specialize TFPGMap<string, TProperty>;
+  TProperties = specialize TFPGMapObject<string, TProperty>;
 
   TFloatProperty = specialize TValueProperty<single>;
   TStringProperty = specialize TValueProperty<string>;
