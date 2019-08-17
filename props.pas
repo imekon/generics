@@ -22,7 +22,7 @@ type
   protected
     _value: T;
     function GetValue: T; virtual;
-    procedure SetValue(value: T); virtual;
+    procedure SetValue(aValue: T); virtual;
   public
     property Value: T read GetValue write SetValue;
   end;
@@ -54,9 +54,9 @@ begin
   result := _value;
 end;
 
-procedure TValueProperty.SetValue(value: T);
+procedure TValueProperty.SetValue(aValue: T);
 begin
-  _value := value;
+  _value := aValue;
 end;
 
 end.

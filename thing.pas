@@ -43,10 +43,23 @@ end;
 procedure TThing.Dump;
 var
   i: integer;
+  value: string;
+
+  prop: TProperty;
 
 begin
   for i := 0 to _properties.Count - 1 do
-    WriteLn(i + 1, ' ', _properties.Data[i].Name);
+  begin
+    prop := _properties.Data[i];
+
+    if prop is TStringProperty then
+       value := (prop as TStringProperty).Value;
+
+    if prop is TFloatProperty then
+       value := FloatToStr((prop as TFloatProperty).Value);
+
+    WriteLn(i + 1, ' ', prop.Name, ' ', value);
+  end;
 end;
 
 end.
