@@ -43,14 +43,10 @@ end;
 procedure TThing.Dump;
 var
   i: integer;
-  prop: TProperty;
 
 begin
   for i := 0 to _properties.Count - 1 do
-  begin
-    prop := TProperty(_properties.Items[i]);
-    WriteLn(i + 1, ' ''', prop.Name, '''');
-  end;
+    WriteLn(i + 1, ' ', _properties.Data[i].Name);
 end;
 
 end.
